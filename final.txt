@@ -1,0 +1,2232 @@
+
+
+
+I'll send you some reference documents before we meet, could you please have a look at them and then we can definitely connect to discuss things in detail
+MVP Project Overview - https://www.loom.com/share/cf0ec7478adb4f7497ec84df8523a6e0?sid=025aeb1f-ea32-4a6d-a1fa-ceac5193a6b4
+Reference Video from - https://horizon3.ai/nodezero/external-pentesting/
+MVP Discovery - https://hypertrends.atlassian.net/wiki/x/AQCMmw
+MVP Requirements - https://hypertrends.atlassian.net/wiki/x/AgCLmw
+ReconX Package - https://hypertrends.atlassian.net/wiki/x/AQCxn
+VulnX Package
+https://www.loom.com/share/7a72e009ad004239ba62313df1375195
+https://www.loom.com/share/b8bc2ab65e974f85aa3eb668eeac7118
+You can start taking an overview from this and i can then connect with you and explain the project in detail (edited) 
+
+
+MVP Project overview- 
+16:12
+Re-try. Oh yeah. Re-started.
+16:22
+Re-do, or attack tool, re-started again. Let's just say Attack schedule, attack, removed updated, attack tools identified, tools updated, attack tools added, attack started, external container created to start the attacks.
+16:51
+Umm, okay. So. So we will say one of the things that we will do behind the scenes is um, attack, configuration added.
+17:06
+Good. New, and I'm gonna put this in different colors, maybe, because these are developer tasks, so.
+17:18
+So, uhh, Actually, yeah, so.
+17:57
+What do I mean? By a configuration added. So, every attack will have a default configuration. They should also be able to update that.
+18:05
+We should be able to create a plugin directory for all the attacks and we should be able to list the attacks in there.
+18:11
+And we should be able to update that. We should be able to. So, add attack added to directory. Attack removed from directory.
+18:26
+Okay. Then you have vulnerability scans.
+18:46
+started. . . . this is already in-zap. We already have this. So, we are going to Yup.
+19:06
+Okay. Oh, this is good.
+19:33
+So, just- In 20 minutes, I think we've done a fantastic job. You know, this, I feel like, okay, we've figured out the attacks, we've figured out asset management.
+19:44
+We now need to talk about the outcomes. So, umm, let's go ahead and- add another frame. time. Okay, so outcomes, uhm, attack, outputs, consolidated.
+20:32
+We need to figure out how to do this. There is a big discovery around that. Attack, outputs, uh, document. And then, CXRA score, generated.
+20:49
+Outcomes mapped. I hope to. Controls. There's gotta be more in here. I'm just kinda trying to figure out what else do we need.
+21:07
+So, okay. So then. and I think this might be a smaller project than Benchmark.
+21:23
+So, um, okay. Let's- Let's start looking at this. And then what we will do is, I would like us to now start looking at this and start building any additional- things that we have, uhm, to look at.
+21:41
+So I'm just gonna say, um, zap, vulnerability scanning complete, um, attack tools listing.
+21:55
+Thank you for watching. And we're just gonna start listing all the tools that we have because, um, okay. So Cali Linux.
+22:02
+Relax. Or Arch Linux containers. Or pen testing. We will say PDF. ADF. And testers. Framework automation. And we're gonna use.
+22:24
+. Oh, come on. I'm, Okay, then we're gonna use, These are for, uhm, It's just gonna take this.
+23:19
+Mm. Mm. Mm. . Mm.
+23:46
+Okay, so I think that's- that's all I have for now and- Obviously, one of the things that we need to do is start figuring out which one goes where.
+24:22
+You know, umm, umm, there is going to be a little bit- of DevOps related stuff that we need to do for this.
+24:28
+And so we're going to kind of get a little serious about things here on this project. So umm, your job is to start looking at API calls that we need and we are going to take things from there, okay?
+24:43
+
+Bye bye.
+
+
+
+
+Reference Video form --  
+hey everybody my name is Noah King I'm a
+0:08
+senior engineer here at Horizon 3 AI
+0:10
+wanted to go ahead and give you a quick
+0:12
+demo into external pin testing and
+0:15
+external assets within the Horizon 3
+0:18
+node zero platform so I've already gone
+0:21
+ahead and logged in the first thing that
+0:23
+you'll do is go to external assets from
+0:26
+there you can go ahead and create an
+0:28
+asset group an asset group is just a
+0:31
+collection of assets that belong on the
+0:33
+internet so we'll go ahead and click
+0:34
+that button you can give it a name uh
+0:38
+such as corporate
+0:41
+assets North Carolina and then what
+0:44
+assets do you want to include uh in this
+0:47
+case you can give it domains like
+0:49
+Horizon 3 AI Horizon
+0:51
+3.com uh you can also Supply IP
+0:54
+addresses as well so domains or IP
+0:57
+addresses both are allowed
+1:00
+from there you can also add a git
+1:03
+account we support GitHub gitlab and bit
+1:06
+bucket so I'll go ahead and add that as
+1:12
+well and then if you want to add your
+1:15
+AWS account IDs you can do that here as
+1:17
+well 12 digits from there you can also
+1:20
+provide a list of company names this
+1:22
+just allows with subdomain brute forcing
+1:25
+and uh discovering more assets out there
+1:28
+on the internet that you might not be
+1:29
+aware of of so we'll go ahead and add
+1:32
+that as
+1:33
+well
+1:36
+and from there you can create the asset
+1:39
+group and then you can run asset
+1:42
+Discovery once asset Discovery starts
+1:45
+running all the infrastructure will spin
+1:47
+up in node Zero's uh infrastructure so
+1:50
+there is no work for deployment on the
+1:52
+enduser side and let's go ahead and
+1:55
+let's take a look at one that is
+1:57
+completed so here is my corporate ass
+1:59
+Assets in Europe There are 16 domains 52
+2:04
+IPS and from here what you will have to
+2:06
+do is authorize what domains you want to
+2:09
+have pin tested or IPS so from here I
+2:12
+can go ahead and start to look through
+2:14
+the list and maybe I say that these two
+2:18
+are
+2:19
+authorized additionally you'll notice
+2:22
+anything with a yellow indicator um that
+2:26
+might be a thirdparty asset may be
+2:28
+unreachable
+2:30
+uh could be out of your scope so you
+2:31
+want to ensure that you do indeed own
+2:33
+the assets and are not pin testing other
+2:36
+company assets from there once you have
+2:39
+some domains
+2:41
+authorized you're ready to run a pin
+2:44
+test to run a pinest you can then click
+2:47
+external
+2:48
+pinest walk through the
+2:50
+steps corporate EU assets give it a
+2:55
+[Music]
+2:57
+name and then the recommended defaults
+3:01
+uh that's just a
+3:03
+template you can also configure more
+3:05
+things about the actual attack
+3:07
+configuration such as password spraying
+3:10
+uh credential reuse checking for default
+3:14
+credentials scanning SMB shares turning
+3:17
+on or off um certain exploits as well as
+3:21
+post exploitation hash cracking from
+3:23
+there you can click next you can choose
+3:25
+a runtime if you want it to run for a
+3:27
+specified amount of time agreed to the
+3:30
+legal um statement and from there you
+3:32
+can run your PIN test and then the
+3:34
+external pin test will spin up and it
+3:37
+will go into the real time view from
+3:39
+there uh you can then once it is
+3:42
+finished you can actually review the pin
+3:43
+test so in this case uh this is the
+3:46
+summary and we had a bunch of different
+3:49
+attacks that led to different impacts
+3:52
+within the pinest we can see that
+3:54
+there's 38 impacts 45 weaknesses 43
+3:59
+critic potentials involved from there
+4:01
+you can just start to drill in to
+4:04
+anything that may be of interest uh for
+4:06
+the user and then you can look at the
+4:09
+attack graph you can look at the
+4:11
+explanations and everything as well uh
+4:14
+behind the actual
+4:16
+exploit from here we can see a narrative
+4:18
+no zero launched on this public IP it
+4:22
+enumerated a bunch of usernames 160 it
+4:26
+verified one of them it discovered Azure
+4:29
+multi Factor off was disabled for an
+4:31
+intra user and then from there it did
+4:34
+password spraying it was able to
+4:36
+discover a refresh token and then it
+4:39
+discovered a credential it was able to
+4:41
+log in and from there more and more
+4:45
+happens but eventually it leads to the
+4:47
+Microsoft Outlook uh being accessed and
+4:51
+you can look through the attack paths
+4:53
+you can find the proofs all those things
+4:56
+if you're interested in getting started
+4:58
+with external pin testing uh reach out
+5:00
+to Horizon 3 AI uh but just to recap
+5:04
+quickly create an asset group from there
+5:07
+create an external pin test with the
+5:11
+asset group and then from there run your
+5:13
+PIN tests and you can review them when
+5:15
+you're done that is all hope you enjoyed
+5:18
+this thank you
+
+
+XRAY | Discovery
+
+
+
+By Ayushi Gandhi
+
+2 min
+
+5
+
+Add a reaction
+🔐 Overview
+🔄 Functional Modules (Based on Narratives)
+1. Asset Management
+2. Reconnaissance
+3. Attack Execution
+4. Vulnerability Scanning
+5. Outcome Processing
+🧰 Penetration Testing Toolset Used
+🧠 AI Integration in Security Workflows
+📊 Real-World Penetration Testing Inspiration
+🕸️ Security Workflow Summary
+🔑 What Makes CyberXray Unique
+🔐 Overview
+CyberXray is a security automation and intelligence platform designed to:
+
+Continuously assess an organization’s attack surface.
+
+Perform scheduled penetration testing using real-world tools.
+
+Generate human-readable reports using AI.
+
+Map vulnerabilities to compliance controls and risk scores.
+
+It’s not just a scanner. It’s a smart, AI-augmented offensive security orchestrator that mimics real-world adversarial behavior while integrating AI to contextualize results for business and security teams.
+
+🔄 Functional Modules (Based on Narratives)
+1. Asset Management
+Add/Remove/Exclude/Group assets.
+
+Maintain asset groups, including global visibility and details view.
+
+Initiates reconnaissance based on asset data.
+
+2. Reconnaissance
+AI Recon Orchestration:
+
+Starts and finishes automated recon flows.
+
+Generates AI-backed recon reports.
+
+Recon Tools Discovery:
+
+Identifies which tools should be used on the asset.
+
+Recon Run Tracking:
+
+Results listed, viewed, and logged.
+
+3. Attack Execution
+Attack Lifecycle:
+
+Attacks are scheduled, identified, updated, and executed.
+
+Support for retries, audit logs, and listings.
+
+Attack Tools:
+
+Tools are identified, configured, and executed per tenant.
+
+Tools are Python-based and tailored to external attack vectors.
+
+Tool Output Handling:
+
+Raw results are parsed, synthesized, mapped to controls, and scored.
+
+4. Vulnerability Scanning
+Leverages ZAP, Nikto, and Nuclei for targeted scanning.
+
+Supports scanning lifecycle: start → process → map → complete.
+
+5. Outcome Processing
+Post-attack, results are processed by AI to:
+
+Humanize the findings (convert tech to understandable risk)
+
+Generate reports
+
+Map findings to compliance frameworks
+
+Create a CyberXray risk score per run
+
+🧰 Penetration Testing Toolset Used
+These tools represent both active recon and vulnerability scanning capabilities:
+
+Tool
+
+Purpose
+
+Type
+
+DNSDumpster
+
+DNS & subdomain enumeration
+
+Active Recon
+
+Nmap
+
+Port scanning & basic service fingerprinting
+
+Both
+
+ZAP
+
+Dynamic Application Security Testing (DAST) for web apps
+
+Vulnerability Scanning
+
+TheHarvester
+
+OSINT (emails, domains, usernames, etc.)
+
+Active Recon
+
+AI Interception Agent
+
+Intercepts and processes security data in real-time using LLMs
+
+Active Recon (+ AI Post-Processing)
+
+Nikto
+
+Web server vulnerability scanning
+
+Vulnerability Scanning
+
+Nuclei
+
+High-speed template-based vulnerability scanner
+
+Vulnerability Scanning
+
+This toolset spans from information gathering → vulnerability identification → AI-driven analysis.
+
+Active Recon: Tools that gather publicly accessible information without directly exploiting vulnerabilities.
+
+Vulnerability Scanning: Tools that interact with systems/services to identify known security weaknesses.
+
+Both: Tools like Nmap that blur the lines by performing both discovery and light probing that may expose vulnerabilities
+
+🧠 AI Integration in Security Workflows
+During Recon & Attack Runs:
+
+AI identifies optimal tools based on asset context.
+
+AI determines if recon results need further scanning.
+
+After Tool Execution:
+
+AI parses raw tool outputs.
+
+Synthesizes summaries and maps them to known threats or compliance needs.
+
+Report Generation:
+
+Converts technical data into stakeholder-ready narratives.
+
+Provides compliance mapping (e.g., to CIS, NIST, etc.)
+
+📊 Real-World Penetration Testing Inspiration
+Inspired heavily by NodeZero by Only Pentesting Platform Proven in Production , this system mirrors:
+
+External attacker mindset (zero-trust, public exposure first)
+
+No agent install — attacks run independently
+
+Fully autonomous pentests — with smart, explainable results
+
+Scoring models — to show the impact in an executive-friendly way
+
+🕸️ Security Workflow Summary
+Tenant Onboards & Adds Assets (e.g., Bloques de software para la gestión de tiempos y movimientos )
+
+Reconnaissance begins → Tools selected → AI summarizes findings
+
+Scheduled attacks run → Tools executed → Output collected
+
+AI analyzes tool output → Generates reports + scores
+
+Results uploaded → Viewed by org or security analysts
+
+Mapped to controls for compliance and auditing
+
+Security posture continuously updated
+
+🔑 What Makes CyberXray Unique
+Combines traditional pentesting tools with AI orchestration & summarization
+
+Operates on a per-tenant basis with clear configuration for attack context
+
+Prioritizes human-readable outputs, unlike most scanner tools
+
+Treats pentests as scheduled, auditable, and repeatable units — not one-off gigs
+
+
+MVP Requirements -- 
+
+👤 Primary User Persona
+Cybersecurity Analyst / IT Admin from an organization who wants to:
+
+Test external attack surface
+
+Identify vulnerabilities
+
+Receive human-readable reports
+
+Ensure compliance mapping
+
+🧩 Full User Story: Lifecycle Walkthrough
+ 
+
+✅ Step 1: Asset Discovery
+User Story
+As an asset owner or admin, I want to input my root domain (e.g., ticketblox.com) and let the system automatically discover all related assets like subdomains, associated IPs, technologies, or services, so I can select which ones I want to manage and scan.
+
+ 
+
+System Behavior
+ADV stands for Advanced Enhancement Suggestions and can be Optional
+
+Phase
+
+Action
+
+1	
+User Input
+
+Root domain, email list or top-level domain (e.g., ticketblox.com)
+
+2	
+Validation
+
+System validates domain format, resolves DNS
+
+3	
+Discovery Triggers
+
+Launches a toolchain that collects: subdomains, related IPs, SSL data, WHOIS, OSINT
+
+4	
+Tool Execution
+
+Tools run asynchronously with retries and timeouts
+
+5	
+AI Enhancement
+
+AI deduplicates, enriches, and scores discovered entries based on confidence
+
+6	
+Preview UI
+
+User sees a structured list (subdomain, IP, category, suggested tag, confidence score)
+
+7	
+User Action
+
+Select which assets to keep → move to Manual Add step
+
+8	
+Post-Selection
+
+Selected assets are saved under the tenant, and available for further grouping/recon
+
+9	
+Scoping Rules (ADV)
+
+Let user limit discovery to a subdomain namespace (e.g., only *.tickblocks.com)
+
+ 
+
+Edge Cases
+ Invalid or unresolvable domain 
+
+Suggestions: We can show error: “Domain does not resolve — please check spelling or DNS settings.”
+
+Too many assets discovered 
+
+Suggestions: We can Paginate results, allow filtering by type, confidence
+
+Duplicate assets from previous scans
+
+No assets discovered
+
+Suggestions: We can Show: “No assets found — you can proceed with manual addition.”
+
+False positives (e.g., unrelated subdomains)
+
+ 
+
+Tools Used for Discovery of Assets
+References - https://miro.com/app/board/uXjVJXwlo7c=/?moveToWidget=3458764636306917773&cot=14Connect your Miro account 
+
+Tool
+
+Purpose in Discovery
+
+Discovery Role
+
+1	
+DNSDumpster
+
+Discover DNS records, subdomains, related hosts
+
+Subdomain Enumeration
+
+2	
+TheHarvester
+
+Harvests subdomains, emails, and usernames using OSINT sources like Google, Bing, etc.
+
+OSINT-based Discovery
+
+3	
+KnockPy
+
+Subdomain enumeration using wordlists and DNS resolution
+
+Subdomain Brute-Forcing
+
+4	
+Fierce
+
+DNS reconnaissance, subdomain brute-forcing, and network mapping
+
+DNS Discovery
+
+5	
+DNS Recon
+
+Gathers NS records, MX, zone transfers, brute-force subdomains
+
+DNS Infrastructure Discovery
+
+6	
+WhoIs
+
+Gets domain ownership data, registrant info
+
+Registrant Discovery
+
+7	
+Dig Utility
+
+DNS query tool used to resolve and extract DNS records
+
+DNS Resolution
+
+8	
+NSLookup
+
+Basic DNS record resolution
+
+DNS Resolution
+
+9	
+NetCraft
+
+Identify web hosting details, subdomains, tech stack info
+
+Hosting & Tech Stack Info
+
+10	
+WhatWeb
+
+Fingerprints technologies used by websites (CMS, servers, etc.)
+
+Tech Stack Discovery
+
+ 
+
+✅ Step 2: Manually Add an Asset (Domain/IP)
+User Story
+As an asset owner or admin, I want to manually add an asset such as ticketlox.comm  or an IP address so that I can immediately initiate recon, configure exclusions, or group it with other assets.
+
+ 
+
+System Behavior
+Phase
+
+Action
+
+1	
+User Input
+
+Asset value (e.g., domain, IP, CIDR, web app URL)
+
+2	
+Validation
+
+System validates format and optionally checks DNS resolution
+
+3	
+Type Classification
+
+User selects asset type via dropdown (Domain, IP, CIDR (Classless Inter-Domain Routing) , Web App, Cloud Asset, etc.) System may auto-suggest based on pattern
+
+4	
+Tag Assignment
+
+User can assign contextual tags: Production, Staging, Critical, etc + Dynamic Tagging from runtime detectors
+
+5	
+Exclusion Flags
+
+Option to predefine whether the asset should be excluded from recon/attack
+
+6	
+Save Asset
+
+Asset is stored under tenant; ready for grouping and analysis
+
+7	
+Optional Grouping
+
+User can assign the asset to a group (existing)
+
+8	
+Ownership Verification (ADV)
+
+Option to verify domain ownership via DNS TXT record, HTML file, or email match
+
+9	
+Change Detection (ADV)
+
+Warn if an existing asset’s IP, DNS, or cert changes since last addition
+
+ 
+
+Edge Cases
+Invalid domain/IP format (system rejects)
+
+Asset already exists (system notifies duplication or merges)
+
+User doesn’t have permission to add assets (RBAC enforcement)
+
+Unsupported asset type (e.g., internal IPs)
+
+
+❓ My Questions for You
+What kinds of assets should be allowed?
+
+Just the domains/IPs only? Or also cloud resources, web apps, etc.?
+
+If yes, Should we classify asset types on creation, manually or may be using AI? 
+
+the user can select the type (via dropdown), but add auto-detection + suggestions as a helper
+
+User sees a dropdown with asset types:
+
+Domain, IP Address, Web App, Cloud Asset (e.g., S3 bucket, Azure VM), External Login Page
+
+After input, system auto-detects based on pattern and suggests the right type, e.g.:
+
+ticketblox.com  → “Did you mean: Domain?”
+
+https://app.tickblocks.com → “Looks like a Web App URL”
+
+Final decision is left to the user in case of ambiguity.
+
+Benefit: Helps tailor recon/attack tooling. E.g., Nuclei for web apps, Nmap for IPs, Harvester for domains.
+
+Asset Verification / Ownership Validation (Optional)
+
+Do we want to support asset ownership verification? Especially for public assets to prevent targeting 3rd parties.
+
+Email verification (e.g., for admin@domain.com)?
+
+Benefit: Prevents abuse and ensures responsible scanning.
+
+Asset Change Detection
+
+If the user adds an asset that’s already known — should we:
+
+Show last recon/attack results?
+
+Ask to merge or duplicate with new tracking?
+
+Show what has changed (e.g., DNS/IP shift)?
+
+ Benefit: Enables smarter attack re-runs. Saves time. Encourages reusability.
+
+ 
+
+✅ Step 3: Asset Grouping 
+ 
+
+User Story
+As an asset owner or admin, I want to group my assets (domains, IPs, apps) into logical categories like “Public Web Apps” or “Third-Party Vendors” so I can manage, scan, and prioritize them more efficiently.
+
+ 
+
+System Behavior
+ADV stands for Advanced Enhancement Suggestions and can be Optional
+
+Functionality
+
+Details
+
+1	
+Group Creation
+
+User can create a new group with a name, optional description, and tags
+
+2	
+Add Assets to Group
+
+Users can assign one or more assets to a group manually or during creation
+
+3	
+Group View
+
+UI displays all groups with asset counts, last scanned, score, etc.
+
+4	
+Edit/Delete Group
+
+Users can rename, reassign, or delete groups (only soft delete recommended)
+
+5	
+Per-asset Toggle
+
+Include/exclude asset in a group
+
+6	
+Group Types
+
+User-defined — not forced into fixed categories
+
+7	
+Usage in Flows
+
+Recon and Attack modules allow selecting a group to apply bulk operations
+
+8	
+Nested Grouping (ADV)
+
+Allow grouping within a group (e.g., “Web Apps” → “Customer-Facing” vs “Internal”)
+
+9	
+Group Tags (ADV)
+
+Tags like production, high-priority, staging can be attached to groups for filtering
+
+10	
+Group Summary View (ADV)
+
+Summarizes recon/attack history across all assets in the group
+
+11	
+Group-level Risk Score (ADV)
+
+ 
+
+Aggregates severity across assets 
+
+Aggregate recon/attack results to assign a CyberXray Score to a group based on:
+
+Highest critical finding
+
+Average severity
+
+Time since last recon/scan
+
+ 
+
+Edge Cases
+Group name already exists
+
+No assets selected for grouping
+
+Grouped assets have mismatched types (e.g., domain + subnet)
+
+Asset already grouped elsewhere
+
+ 
+
+❓ My Questions for You
+Should assets be allowed in multiple groups?
+
+If yes, how does it impact recon/attack targeting and result aggregation?
+
+If no, should we warn or auto-remove from previous group?
+
+Can a group be created with no assets?
+
+If yes, should it be flagged as “draft“, “inactive” or “pending”?
+
+ 
+
+✅ Step 4: Reconnaissance Triggered
+ 
+
+User Story
+As an asset owner or admin, I want to run reconnaissance on a selected asset or group so that I can map out exposed services, subdomains, technologies, and potential entry points before launching any active attacks..
+
+ 
+
+System Behavior
+Phase
+
+Action
+
+1	
+Triggering
+
+Recon can be triggered manually by the user or scheduled recurring recon auto triggered after asset addition
+
+2	
+Target Input
+
+Asset(s) or Asset Group selected for reconnaissance
+
+3	
+Permission Check
+
+Only the asset owner or an admin can trigger recon. Unauthorized users are blocked.
+
+4	
+Tool Selection
+
+Based on asset type, system picks relevant tools (from Supported Recon Tools list).
+
+5	
+Tool Orchestration
+
+The selected tools are executed in parallel. Failures or timeouts are retried automatically. Each tool collects raw data about DNS records, subdomains, ports, etc.
+
+6	
+Retry Logic
+
+If a tool fails, retry up to 3 times. If it fails on the 4th attempt, mark tool as Broken.
+
+7	
+Raw Output Storage
+
+Every tool’s raw output (JSON/text) is saved for audits, debugging, and report processing.
+
+8	
+AI Summarization
+
+AI analyzes the raw recon data and and generates an executive-level summary of findings (key risks, exposed services, recommendations) — e.g., “3 critical ports exposed”, “Outdated SSL certificate found”, “Login portal detected at /admin.”
+
+9	
+Report Generation
+
+A detailed recon report is created including: asset summary, tool results, AI insights, and recommended next steps. It’s viewable in the UI and downloadable as PDF, JSON, or CSV.
+
+10	
+Metadata Updates
+
+The asset’s profile is updated with any new data discovered during recon — e.g., open ports, subdomains, DNS records, tech stack, SSL expiry, etc.
+
+11	
+Exclusion Handling
+
+Any excluded assets (marked by user or policy) are automatically skipped and logged. User is warned if recon is attempted on an excluded asset.
+
+12	
+Recon Status Update
+
+User sees real-time or post-run status updates — completed, partial failure, skipped assets, or tool errors.
+
+13	
+Audit Logging
+
+The system logs who triggered the recon, when it was run, what tools were used, how long it took, and what was discovered. These logs are tenant-specific and used for traceability.
+
+14	
+Recon Diffing (ADV)
+
+If this is not the first recon, the system compares it to the previous one and highlights what changed — e.g., “2 new ports found”, “DNS A record changed”.
+
+ 
+
+Recon Lifecycle Status Values
+Pending → Job created, waiting to start
+
+In Progress → Recon running, tools executing in parallel
+
+Tool Running → Individual tool executing
+
+Tool Completed → Tool finished successfully
+
+Tool Failed → Tool failed, retry scheduled
+
+Broken → Tool failed more than 3 times, marked as unusable for this run
+
+Partially Completed → Recon finished but some tools failed
+
+Completed → All tools finished successfully
+
+Skipped → Asset excluded from recon due to settings
+
+ 
+
+Edge Cases
+Tools timeout or crash (partial recon)
+
+Suggestions: Retry up to N times, notify user if final failure
+
+Recon run on already scanned asset
+
+Suggestions: Show previous recon report, suggest re-run or diff mode
+
+Asset marked as excluded
+
+Skip and log reason, show warning on run screen
+
+ No data returned by any tool
+
+Warn user and prompt to try Deep profile or verify asset is live
+
+Tool update/logic change
+
+System should version recon runs and tools used
+
+Recon report incomplete due to network restrictions
+
+External services block or rate-limit scans (e.g., DNSDumpster API fails)
+
+ 
+
+Supported Recon Tools
+Tool
+
+Purpose
+
+1	
+DNSDumpster
+
+DNS & subdomain enumeration
+
+2	
+TheHarvester
+
+Email, subdomain, and username harvesting
+
+3	
+KnockPy
+
+Subdomain brute-forcing
+
+4	
+Fierce
+
+DNS mapping & discovery
+
+5	
+DNS Recon
+
+NS/MX records, brute-force subdomains
+
+6	
+WhoIs
+
+Domain ownership and registration data
+
+7	
+Dig Utility
+
+DNS record lookups
+
+8	
+NSLookup
+
+Basic DNS record resolution
+
+9	
+NetCraft
+
+Hosting, infrastructure, and tech stack info
+
+10	
+WhatWeb
+
+Web application tech stack fingerprinting
+
+ 
+
+❓ My Questions for You
+When should recon be run?
+
+Automatically after adding an asset?
+
+Manually triggered by user?
+
+Do we allow custom recon profiles where the user chooses tools (e.g., “Run only DNSRecon + WhatWeb”)?
+
+Do users need pre-run tool previews (show what tools will be used)?
+
+Should we store raw output from each tool or Do we combine results from multiple tools into one unified recon report ?
+
+Do we need recon “diff” comparison mode to highlight changes across runs?
+
+Are there rate limits per tenant to prevent abuse?
+
+ 
+
+✅ Step 5: Attack Scheduling and Execution
+ 
+
+User Story
+As an asset owner or admin, I want to schedule and execute penetration test attacks on selected assets or asset groups so that I can identify security vulnerabilities in a controlled and compliant manner, at a time that minimizes operational disruption.
+
+ 
+
+System Behavior
+User schedules attack for asset or group (e.g., “2AM on Sunday”).
+
+System spins up Kali/Arch container dynamically outside VPC.
+
+Container reads config (e.g., tenant ID, target asset, tools to run).
+
+Tools like Nmap, Nikto, or TheHarvester run Python-based modules.
+
+Output is stored and zipped; uploaded to cloud (e.g., S3).
+
+Attack audit logs are processed post-run.
+
+Phase
+
+Action 
+
+Triggering
+
+On-demand or scheduled (daily/weekly), with notification settings
+
+Target Selection
+
+User selects one or more assets or asset groups for an attack. 
+
+Group execution supports parallel asset testing (need confirmation)
+
+Permission Check
+
+Only asset owners or admins can schedule or execute attacks. Unauthorized attempts are blocked.
+
+Pre-Execution Checks
+
+System verifies: 
+
+Asset not excluded from attacks, 
+
+No conflicting scans or jobs running,
+
+Asset has not exceeded rate limit (3 max runs)
+
+Selected attack tools exist in Attack Directory and are active
+
+Parameters do not exceed configured thresholds (e.g., max threads)
+
+Container resources are available.
+
+Container image health and toolset version checks pass before spin-up
+
+Run Settings JSON from Attack Directory is valid
+
+Toolset Selection
+
+Tools are selected from the centralized Attack Directory 
+
+Attack Suite includes: DNSDumpster, Nmap, ZAP (with Interceptor), TheHarvester, Nikto, and Nuclei. Auto-selection is based on asset type and recon findings (V1), with manual selection available in vNext.
+
+Configuration
+
+Defaults from Run Settings JSON, parameter overrides (max threads, payload lists, templates)
+
+Containerized Execution
+
+Spin up ephemeral Arch Linux or Kali Linux containers with preinstalled tools. Allocate CPU, memory, and network resources per test complexity. 
+
+Mount S3 bucket inside container for direct output storage. 
+
+run local Python utilities 
+
+AI Agent Coordination
+
+AI agents fetch the correct attack module, execute against targets, and collect raw outputs. For high-volume logs, AI sends data through Gemini (or similar) for summarization before parsing
+
+Execution Control
+
+Tools run in parallel where possible; each has its own lifecycle status (Pending, Running, Completed, Failed). Failed tools retry and then marked as Broken.
+
+Retry Logic
+
+Failed tools are retried up to 3 times; after that, marked as Broken and skipped for the run.
+
+Raw Output Storage
+
+All tool logs are stored (JSON/text) for audits, debugging, and future analysis. Outputs are normalized and indexed in a time-series database for audit trails and historical comparison
+
+AI Processing
+
+AI reviews all outputs, extracts Proof-of-Concept (PoC) evidence,  identifies vulnerabilities, explains risks, and recommends mitigation steps.
+
+Automated Scoring
+
+Map findings to security frameworks (NIST SP 800-53, CMMC L1, ISO 27001). Compute risk scores per asset and per group.
+
+Report Generation
+
+Detailed attack report is compiled into PDF and JSON, including AI summary, raw tool output references, PoC evidence, severity scoring, and control mapping.
+
+Metadata Updates
+
+Asset’s risk profile and CyberXray Score updated based on attack findings.
+
+Audit Logging
+
+Who scheduled, who executed, when, tools used, results, and duration are optionally logged.
+
+Completion Actions
+
+User can export report, create a Jira/SOC ticket, schedule re-test, or trigger remediation workflows. Targeted re-tests can be scheduled for specific vulnerabilities
+
+ 
+
+Attack Lifecycle Status Values
+Pending → Job created, queued for execution.
+
+Scheduled → Job set for a future execution time.
+
+In Progress → Attack running; tools executing in parallel.
+
+Tool Running → Individual tool executing.
+
+Tool Completed → Tool executed successfully.
+
+Tool Failed → Failed, retry scheduled.
+
+Broken → Failed more than 3 times, skipped.
+
+Completed → All tools executed successfully.
+
+Skipped → Asset excluded from attack policy.
+
+ 
+
+Edge Cases
+Scheduled job missed due to failure in container spin-up
+
+Retry up to 3 times, then mark Broken
+
+Domain blocks scanning or blacklists IP
+
+Output file not generated/uploaded (network or storage failure)
+
+User cancels mid-run
+
+Mark job as Cancelled and store partial results
+
+Tool fails mid-run (fallback to partial report + notify user)
+
+Terminate and mark as Partial
+
+ 
+
+Supported Attack Tools Table
+Tool
+
+Purpose
+
+DNSDumpster
+
+DNS & subdomain enumeration to identify attack surface.
+
+Nmap
+
+Port scanning, service version detection, and OS fingerprinting.
+
+ZAP (with Interceptor)
+
+Web application DAST and request/response manipulation.
+
+TheHarvester
+
+OSINT collection of emails, usernames, subdomains for targeted attacks.
+
+Nikto
+
+Web server vulnerability scanning for outdated/misconfigured components.
+
+Nuclei
+
+Template-based scanning for CVEs, misconfigurations, and known exploits.
+
+ 
+
+✅ Step 6: Vulnerability Scanning
+ 
+
+User Story
+As an asset owner or admin, I want to perform a targeted vulnerability scan after an attack run to confirm identified weaknesses, detect known CVEs, and validate misconfigurations, so I can prioritize remediation efforts with high confidence.
+
+ 
+
+Key Difference from Attacks
+Attacks (Step 5) are broad, exploratory penetration tests intended to simulate a real-world adversary and uncover potential entry points.
+
+Vulnerability Scanning (Step 6) is confirmatory and targeted — it checks for specific, known weaknesses (CVE databases, misconfigurations, outdated software) and provides definitive evidence for remediation.
+
+Attacks might find “possible” vulnerabilities; vulnerability scanning confirms “actual, reproducible” vulnerabilities with supporting data.
+
+ 
+
+System Behavior
+ZAP, Nuclei, and Nikto are executed against the target.
+
+Scan lifecycle: start → scan → process output → map results → mark complete.
+
+Scan results are analyzed by AI:
+
+Human-readable summaries
+
+Compliance control mapping (e.g., CIS, NIST)
+
+Risk scoring (CyberXray Score)
+
+Phase
+
+Action
+
+Triggering
+
+Vulnerability scanning can be:  
+
+Auto-triggered immediately after Step 5: Attack Scheduling & Execution  
+
+Scheduled independently  
+
+Run on-demand for a specific asset or group
+
+Target Selection
+
+Assets or asset groups selected for scanning.  Option to focus only on assets flagged in the previous attack report.
+
+Permission Check
+
+Only asset owners or admins can trigger scans. Unauthorized attempts are blocked.
+
+Pre-Execution Checks
+
+System verifies:  
+
+Asset not excluded from vulnerability scans  
+
+No conflicting scans in progress  
+
+Selected scan tools are available and functional  
+
+Scan parameters within allowed limits (e.g., concurrency, timeouts)  
+
+Container resources are available  
+
+Tool configurations (templates, payloads) are valid
+
+Toolset Selection
+
+Core vulnerability scan suite includes:  - ZAP, Nuclei, Nikto 
+
+Configuration
+
+User can configure:  
+
+Scan depth  
+
+Target scope  
+
+Template sets for Nuclei  
+
+Custom payload lists  
+
+Authentication credentials (for protected endpoints) 
+
+Defaults can be preloaded from Attack Directory profiles.
+
+Containerized Execution
+
+Spin up ephemeral Arch/Kali Linux containers with vulnerability scan tools preinstalled.  Allocate CPU/memory/network resources based on scan complexity.  Mount S3 bucket for direct output storage.
+
+Execution Control
+
+Tools run in parallel where possible. Each tool has lifecycle status (Pending, Running, Completed, Failed). Failures retry up to 3 times before being marked Broken.
+
+Raw Output Storage
+
+Store all scan results (JSON/text/XML) in central repository. Normalize and index in time-series DB for historical tracking and compliance evidence.
+
+Parsing & AI Processing
+
+Tool-specific parsers extract:  – CVE identifiers  – Severity levels  – Proof-of-Concept (PoC) details  – Impact and remediation suggestions  - AI enriches results, removes false positives, and provides human-readable summaries.
+
+Compliance Mapping
+
+Findings mapped to relevant standards:  - NIST SP 800-53  - CMMC L1  - ISO 27001  - OWASP Top 10  - MITRE ATT&CK
+
+Scoring
+
+Update CyberXray Score for each asset and group based on scan results.
+
+Report Generation
+
+Generate vulnerability scan report (PDF/JSON/HTML) containing:  - Executive summary  - Technical details  - Confirmed CVEs  - Misconfigurations  - PoC evidence  - Compliance mapping  - Risk score
+
+Metadata Updates
+
+Asset metadata updated with confirmed vulnerabilities, CVE links, and last-scan timestamp.
+
+Audit Logging
+
+Log who initiated the scan, when, which tools ran, duration, and summary of results.
+
+Completion Actions
+
+Export reports  - Create remediation tickets (Jira, ServiceNow)  - Schedule retests for confirmed vulnerabilities.
+
+ 
+
+Edge Cases
+Auth-required endpoints fail to scan properly
+
+High false positives from template-based scanners (e.g., Nuclei)
+
+Scan blocked by CDN/WAF
+
+Scan retries needed due to partial coverage
+
+ 
+
+Supported Vulnerability Scanning Tools Table
+Tool
+
+Purpose
+
+ZAP
+
+Dynamic Application Security Testing (DAST) for web apps; detects runtime vulnerabilities.
+
+Nuclei
+
+High-speed scanning for CVEs, misconfigurations, and exposed services using customizable templates.
+
+Nikto
+
+Web server vulnerability scanning for outdated or misconfigured software/components.
+
+ 
+
+✅ Step 7: Results + Reporting
+User Story
+I want a clear report of what was found, how risky it is, and how to fix it.
+
+System Behavior
+AI summarizes results into executive and technical sections.
+
+Maps findings to OWASP Top 10, MITRE ATT&CK, etc.
+
+Displays CyberXray Score (org-wide, per-asset, per-run).
+
+Allows PDF export or dashboard view.
+
+Historical runs can be compared for regression analysis.
+
+Edge Cases
+📉 Score anomaly (e.g., score drops due to parser bug)
+
+📤 Export fails or malformed report
+
+🔒 Sensitive info exposed in raw logs (AI filters apply redaction)
+
+ 
+
+🔁 Summary: End-to-End Flow
+User adds or discovers assets (auto & manual) → 
+
+classifies/tags & groups them → 
+
+triggers or schedules recon (AI-picked tools) → 
+
+recon results summarized & metadata updated → 
+
+schedules/executes attacks in isolated containers → 
+
+targeted vuln scans confirm & map findings → 
+
+AI generates scored, compliance-mapped reports → 
+
+user views, downloads, integrates with remediation, or schedules retests.
+
+
+
+
+Recon X package
+
+Overview
+ReconX is a lightweight, asynchronous reconnaissance framework designed to orchestrate multiple discovery tools in parallel, persist artifacts, and track execution metadata.
+
+Key Features
+Parallel Execution — Run multiple tools concurrently for speed and efficiency
+
+Standardized Interface — Unified format for inputs, outputs, and logs
+
+Artifact Persistence — Store outputs and metadata for every run
+
+Error Handling — Retries, timeouts, and graceful failure handling
+
+Async Architecture — High-performance, asyncio-based concurrent engine
+
+Extensible Design — Plug in your own tools with BaseTool
+
+Structured Logging — Integrated JsonLogger for traceable execution
+
+Core Features
+Tool Orchestration
+Concurrent tool execution
+
+Tool discovery and dynamic loading
+
+Timeout + retry mechanisms
+
+Fault-tolerant execution
+
+Artifact Management
+Artifacts saved under artifacts/<run_id>/reconx/<target>/
+
+Timestamped, tool-specific outputs
+
+Multiple backend support: Local, S3, PostgreSQL
+
+Status Tracking
+Real-time status: PENDING, RUNNING, SUCCESS, FAILURE, etc.
+
+Execution metrics and logging
+
+Full error traceability
+
+Tool Integration
+Supported reconnaissance tools include:
+
+Nmap — Port scanning & service detection
+
+Amass — Subdomain enumeration
+
+DNSRecon — DNS reconnaissance
+
+Subfinder — Subdomain discovery
+
+TheHarvester — OSINT data gathering
+
+Tools Installation Instructions
+Prerequisites
+
+
+# Install dependencies
+poetry install       
+
+
+# Install system tools (macOS)
+brew install nmap amass dnsrecon theharvester subfinder
+# Ubuntu/Debian
+sudo apt-get install nmap amass dnsrecon theharvester subfinder
+# Optional (Python tools)
+pipx install dnsrecon
+pipx install theharvester
+
+
+# Ensure tools are on PATH
+which nmap amass dnsrecon theharvester subfinder
+Configuration
+Tool Customization
+
+
+nmap_tool = NmapTool(
+  target="example.com",
+  output_dir=Path("artifacts/custom"),
+  nmap_args=["-sV", "-Pn", "-p", "80,443"],
+  timeout=1800,
+  run_id="custom-run"
+)
+How to Use
+Programmatic Usage
+
+
+from src.reconx.main import ReconX
+from src.reconx.schemas.reconx_request_schema import ReconXRequest
+request = ReconXRequest(
+  target="example.com",
+  tools=[ReconToolName.NMAP, ReconToolName.SUBFINDER],
+  run_id="your-run-id"
+)
+reconx = ReconX()
+result = await reconx.run_async(request)
+Individual Tool Example
+
+
+tool = NmapTool(target="example.com", output_dir=Path("artifacts"), run_id="scan-001")
+result = await tool.execute()
+print(result.to_dict())
+Integration Architecture
+High-Level Overview
+
+
+ReconX → ReconRunner → Tool Registry
+      ↘ 
+      Metadata → Artifact Saver → BaseTool → Tool
+Component Responsibilities
+ReconX (main.py)
+
+Orchestrates execution, validates request, aggregates results
+
+ReconRunner
+
+Runs tools concurrently, monitors timeout, logs errors
+
+Tool Registry
+
+Maps tool names to classes dynamically
+
+BaseTool
+
+Abstract base for consistent tool implementation
+
+Artifact Saver
+
+Saves tool outputs and metadata to local/S3/db
+
+Integration Steps
+Step 1: Import ReconX
+
+
+from src.reconx.main import ReconX
+from src.reconx.schemas.reconx_request_schema import ReconXRequest
+Step 2: Configure Environment
+
+
+# Check installation
+which nmap amass dnsrecon subfinder theharvester
+Step 3: Build Request
+
+
+request = ReconXRequest(
+  target="your-target.com",
+  tools=[ReconToolName.NMAP, ReconToolName.AMASS],
+  run_id="run-001"
+)
+Step 4: Execute Recon
+
+
+reconx = ReconX()
+result = await reconx.run_async(request)
+Best Practices
+Retry on transient tool failures
+
+Tune timeouts per tool complexity
+
+Sanitize and validate all inputs
+
+Monitor execution metrics and logs
+
+Clean temp artifacts if not needed
+
+Example
+Sample Request 
+
+
+{
+  "target": "hypertrends.com",
+  "tools": ["nmap", "dnsrecon", "amass", "subfinder", "theharvester"],
+  "run_id": "123e4567-e89b-12d3-a456-426614174000"
+}
+ 
+
+Sample Response
+
+
+{
+    "run_id": "123e4567-e89b-12d3-a456-426614174000",
+    "domain": "hypertrends.com",
+    "tools": [
+      "nmap",
+      "dnsrecon",
+      "amass",
+      "subfinder",
+      "theharvester"
+    ],
+    "artifacts_dir": "/Users/ayushi/Desktop/cyber-catch/cyberxray-be/artifacts/123e4567-e89b-12d3-a456-426614174000/reconx",
+    "results": [
+      {
+        "tool_name": "nmap",
+        "status": "SUCCESS",
+        "start_time": "2025-08-23T10:20:21.767388+00:00",
+        "end_time": "2025-08-23T10:24:30.846335+00:00",
+        "duration_seconds": 249.078947,
+        "retries": 0,
+        "output_path": "/Users/ayushi/Desktop/cyber-catch/cyberxray-be/artifacts/123e4567-e89b-12d3-a456-426614174000/reconx/nmap/nmap_hypertrends.com_success.txt",
+        "error": null
+      },
+      {
+        "tool_name": "dnsrecon",
+        "status": "SUCCESS",
+        "start_time": "2025-08-23T10:20:21.767572+00:00",
+        "end_time": "2025-08-23T10:20:27.835242+00:00",
+        "duration_seconds": 6.06767,
+        "retries": 0,
+        "output_path": "/Users/ayushi/Desktop/cyber-catch/cyberxray-be/artifacts/123e4567-e89b-12d3-a456-426614174000/reconx/dnsrecon/dnsrecon_hypertrends.com_success.txt",
+        "error": null
+      },
+      {
+        "tool_name": "amass",
+        "status": "SUCCESS",
+        "start_time": "2025-08-23T10:20:21.781161+00:00",
+        "end_time": "2025-08-23T10:22:50.935386+00:00",
+        "duration_seconds": 149.154225,
+        "retries": 0,
+        "output_path": "/Users/ayushi/Desktop/cyber-catch/cyberxray-be/artifacts/123e4567-e89b-12d3-a456-426614174000/reconx/amass/amass_hypertrends.com_success.txt",
+        "error": null
+      },
+      {
+        "tool_name": "subfinder",
+        "status": "SUCCESS",
+        "start_time": "2025-08-23T10:20:21.785673+00:00",
+        "end_time": "2025-08-23T10:20:41.143350+00:00",
+        "duration_seconds": 19.357677,
+        "retries": 0,
+        "output_path": "/Users/ayushi/Desktop/cyber-catch/cyberxray-be/artifacts/123e4567-e89b-12d3-a456-426614174000/reconx/subfinder/subfinder_hypertrends.com_success.txt",
+        "error": null
+      },
+      {
+        "tool_name": "theharvester",
+        "status": "SUCCESS",
+        "start_time": "2025-08-23T10:20:21.788966+00:00",
+        "end_time": "2025-08-23T10:21:12.762786+00:00",
+        "duration_seconds": 50.97382,
+        "retries": 0,
+        "output_path": "/Users/ayushi/Desktop/cyber-catch/cyberxray-be/artifacts/123e4567-e89b-12d3-a456-426614174000/reconx/theharvester/theharvester_hypertrends.com_success.txt",
+        "error": null
+      }
+    ]
+  }
+Troubleshooting
+Common Issues & Fixes
+Issue
+
+Resolution
+
+1	
+Tool Not Found
+
+Check PATH, reinstall with brew or apt
+
+2	
+Permission
+
+Check write permissions on artifact directory
+
+3	
+Timeout
+
+Increase RECONX_DEFAULT_TIMEOUT in .env
+
+4	
+Memory Crash
+
+Limit number of concurrent tools or target scope
+
+Contributing
+Add a New Tool
+Extend BaseTool
+
+Implement async def execute()
+
+Register in tool_registry.py
+
+Add to ReconToolName enum
+
+Write tests and docs
+
+Code Standards
+Use type hints
+
+Add docstrings
+
+Follow existing file/module structure
+
+Include try/except with JsonLogger
+
+
+
+ReconX Package - Overview and Integration Guide
+
+Hi. Hi team. So, I'm creating this video to explain the Recon X package that we have created, which will be responsible for doing the reconnaissance using different, different tools.
+0:15
+For now, we have integrated tools like Amass, DNS Recon, Nmap, Subfinder, and the Harvester, which will be responsible for doing the passive reconnaissance and will be able to generate the output under the artifacts folder for now.
+0:32
+We do have a plan to integrate the S3 bucket, uh, the output inside the S3 bucket, So that is also something that we will be working on.
+0:48
+So let me just explain to you what we have done so far. So in this reconnaissance package, we can do the tool orchestration where we can have one or more tools being used, uhm, parallelly and, uh, we individually maintain the information of the reconnaissance for each tool.
+1:12
+The information that we get from each tool is being saved under the artifacts folder, which is this. I'll get back to that.
+1:21
+Uhm, apart from that, we also do manage the statuses of each tool, whether it has timed out successfully done, partially done, or it's in the failure position, whatever it is, we get the status.
+1:36
+Uhm, currently everything is being saved under the artifacts, as I've already mentioned. The tools that we have integrated are these five tools for now, and, uh, whatever new tool we want to add, we can easily do it with, uh, this structure.
+1:59
+So, what we have to do is we have this tool registry. In there, whichever tools that are available are being registered, and will be executed parallelly.
+2:12
+So, if there's any more tool that we want to add or use can be done. So, uhm, that's how we register the tool, and that's how the tools that we are listed are being used.
+2:28
+Apart from that, these are the artifacts. Currently, we are just supporting this, but, uhm, as and when we move forward, we have the plan to have the S3 saver as well, which we will be saving the information inside the S3.
+2:45
+Okay. So, for For managing the tools, we have one way to Now, BaseTool is responsible for having the common, uh, managing the common functionality which all the tools might have, which is handling the error, handling the timeout, then saving the information, uhm, doing the subprocess that is running
+3:08
+it in parallel, and, yeah, that's all it covers. It's like saving the information and everything else, so that is what BaseTool is, and each tool, uh, inherits the BaseTool, and each tool will, first of all, have its default arguments, if we want, we can pass on our arguments as well, but for now, we
+3:31
+have kept the default arguments which is then passed to. You know, process it, and, uh, we have the handling of the timeout, we have the handling of the, uhm, any unexpected error, and whenever everything works fine, we save it, save the information currently inside the artifacts folder, but we will
+3:58
+do it in the S3 bucket as well. So, this is how it's done, uhm, Okay, let me show you the request and response.
+4:14
+So, in request, we can add one or more tools, uhm, and if we want, if we just try, let me just show you by an example, If we try it to add any tool which is not registered, it will directly throw an error as, uhm, that validation error expected are these tools.
+4:41
+So, and we can add one or more tools, and And even if we don't add anything, we have the default tools being set up.
+4:49
+So, whatever we choose will work for this. So, let me just do subfinder and dnsrecon. This will run, and So, the way artifacts folder works is, uhm, whichever tools we have mentioned, it will create a subfolder for that tool, and it will generate the, sorry, just, uhm, output based on that for the nmap
+5:34
+for the script. So, the artifacts, the runid, and that's that, we have reconnects, uhm, the folder name, and the output, which is this one.
+5:44
+For emas, I've already run that, but, yeah, this one. Ticketblocks. Okay. So, yeah, that's how the project package or package, to summarize this, the, we can integrate one or more tools, we can use one or more tools.
+6:10
+For integrating, we need to do the tool registry. We have already provided the readme overview of how the, uhm, package works, what we need to do.
+6:24
+We have rewards. We have provided an overview of the tools that we have integrated, if someone wants to install them, how they can install them, what are the tags, what, everything, every information regarding that, so.
+6:40
+All this information, then we have the main file, over here is the main, which we'll call the runner. And runner will select the tools based on either the user input or else our default, uhm, I can show you, what this looks like, so, yeah, so main file, then we have recon runner, tool registry, then,
+7:15
+yes, uhm, we do have the metadata tracker, which you can see in the API, which is the start time, end time, uh, duration in seconds, what is the output path, currently since it is in local artifacts, so, this is the complete path, then which tools are used, for which tool it is happening, whether it
+7:35
+is success or timeout, it will look like that. So, that is the job of metadata tracker. Artifact saver will save the information in the artifacts.
+7:48
+Base tool I have already explained. Run ID is basically, uhm, the ID that we want to pass. If we don't pass it, that is fine as well.
+7:59
+It will generate a new run ID for the, uhm, run. I'll update the API name. Please ignore that. Uhm, yeah, the S3 or storage that we want to add.
+8:14
+And the tool implementation is this one. So, this is the folder structure. These are all the tools that are integrated.
+8:25
+And the output is attached in the conference page mentioned here, where we have the domain. And for each domain, what commands we are using and what output we are getting.
+8:40
+
+Uh, let me know what your views are. Thank you. Bye-bye.
+
+
+VulnX Package
+
+
+So, I'm creating this video to provide you, uhm, a high-level update on what all we have covered so far.
+0:10
+This is going to be a very high-level thing, I'm not going to go- dive deep into this. Okay. Okay. As you can see, we have worked on two different packages.
+0:23
+as one is the deepest. Connects, which deals, uh, completely with the recon tools and the wall next, which deals with the vulnerability tools.
+0:32
+Now inside the recon X, we have two, uh, integrated tools like a mass DNS, recon and map sub finder and the harvester.
+0:42
+And the output of which is already being shared with, uh, to you under the artifacts folder. We have. Sorry, recon X and all the tools that are integrated with the results that we have obtained so far.
+0:58
+So the recon X package is completely, um, working where we are able to see this information in S3 as well.
+1:06
+So basically the artifacts folder that I have shared is, uh, something that I've downloaded from S3 unit. So whatever tool that we are running, all the information is being provided inside the S3.
+1:20
+So this is the recon part. Now the next part is the vulnerability scanning. The for the vulnerability, we have worked on tools like Metasploit, Nikto and MAP.
+1:32
+again the output for which you can find inside the wall necks Nikto and here's the Nmap. Okay, um, okay, let's move forward.
+1:48
+For the Metasploit, with help of Hamal, I have been able to set up some default auxiliary that is the vulnerability scanning modules.
+1:58
+So that is, um, around 14 modules. That we have predefined or preset that will run for all the targets, irrespective of what the recon information says.
+2:09
+So, um, this is running and you can find all the details inside this. Okay. Um, apart from that, we have, I have worked on the agents.
+2:23
+Now I have created a created one agent, which is responsible for, uh, fetching the recon data. I have provided the recon context in the string format for now.
+2:36
+And, um, I've generated one prompt. Now this prompt is responsible for taking in the, um, default tools and, uh, the recon context and give me a list of module paths for the metasploit to be run.
+2:56
+So the denial list over here is the mod, uh, default modules, like the LLM should not be giving us the response, which is already provided in our default modules.
+3:10
+Like it should give us path, which are apart from that. And, uh, the recon context is also provided so that it decides what needs to be done and which modules should we select.
+3:27
+So as discussed, um, we have by default 14 modules out of which if you want to see, um, we have integrated the LLM as well and it was able to suggest us some different, uh, um, module paths and it has been successfully done.
+3:48
+So 14 are default and the rest is something that So, the running part, it's working, there's no issue with that.
+4:01
+Now, for the fine tuning. So, let me show you the, what I am working on. I have created one MSF plugin, uh, plugin that will be responsible for doing various operations using the MSF console, which is, um, the searching of the module, the getting the information about the module path.
+4:25
+Whether the module path inside that MSF, uh, is present or not, and showing of the module. So, what I have tried to do is, when creating one agent, I provided this tool to the agent.
+4:44
+And what I want to do is that agent should be able to run that tool. Particular function internally, and provide details based on that.
+4:53
+So, uh, that is something that I'm working on. It is not able to currently, appropriately run or execute that, uhm, plugin right now.
+5:09
+But, this is something that I'm working on. If we can get the, agent to choose which, uh, module path it wants, and if it can run and check by its own, then it's fine.
+5:22
+If this is something that is too much for the agent to do, then, uh, worst case scenario is, we will provide all the details in the prompt itself.
+5:33
+As a context, uhm, the agent will be able to then parse and give us the response. The second thing I want to do is, that I will be doing is, whatever response that we get from the LLM, I will be checking first whether that particular module path already exists inside the Metasploit or not.
+5:56
+If it's not existing, then it will break. Then, hence, we will have to pre-check whether the response from the LLM is correct or not.
+6:04
+So, these are the two things that I'm, uhm, working on. Again, I'm not sure how the NSF plugin will work in, but these are my thoughts.
+6:14
+I'm just step-by-step working on it. So, yeah. Apart from that, whatever I'm running, I'm running through the API. Where I provide the run ID, the domain, the tools that we want to run, and in some case, I provide the port as well, depending on what, which tool it is.
+6:40
+So, all that is running using this API. So, this is my update. We have two packages, reconnaissance and wallnax, and wallnax, wallnax is able to generate all the responses and give us the, uh, information on inside the S3.
+6:59
+And, uhm, in progress, we have one agent as well, where agent is working, like it is giving us the modules.
+7:06
+But now, we need to see if those modules are absolutely correct as well as available for the current version or not.
+7:16
+And also, the support for this too. So, yeah, that's it from my end. Let me know if you have any more doubts, okay?
+7:25
+
+Thank you. Bye-bye.
+
+
+
+2. 
+
+00:01
+Hi everyone, so in this video, I'll walk you through the reconnaissance as well as the vulnerability tools. We have used the outputs that they have generated and finally, how our AI system is designed to generate the human readable summary.
+00:24
+And the vulnerability focus summary. Okay, let me just go ahead and first of all introduce you with the Recon package.
+00:38
+So we have this Recon X package and bare minimum, what it will take is the run ID. If we have two hours self, then we can pass it on.
+00:53
+Otherwise, it will generate on its own. And the least thing that we need to update is the domain. To which domain we need to, umm, do the reconnaissance part.
+01:06
+Other things are still configurable where we have already set some T4 tools, even- So if the user doesn't select, or if anyone doesn't select, the dconax package would be able to scan through and umm, run all the default tools.
+01:27
+We can pass on our specific ports, or the arguments for that particular tool that we want. So, if we have any meta data, then we can pass on that as well.
+01:43
+If, if we have any specific command that we want to run for that particular tool, that can also be passed.
+01:50
+So, we have all the flexibility for this package. Whatever we want to do, however we want to, we can do it.
+01:59
+But to run the- What is up? The bare minimum thing that is absolutely required is the do-me or the target information.
+02:08
+Okay. Now, let me show you an S3. So, under, in S3, we have one bucket. And under that, we have Artifex folder, where each run ID generates its own.
+02:24
+Umm, the con tools information. I have this in my local, I can show it to you. Okay. So, as you can see, this, this is the Artifex folder.
+02:37
+Under that, we have the run ID. And under that, we have the recon next door. And the one next door.
+02:44
+So, let's move ahead and first look it. At the subfinder. So, we have run it against the hypertrains.com target.
+03:00
+The output here shows a large list of discovered subdomains. This will help us to map the attacks of race. All the different hosts that could be.
+03:13
+Tested later. So, as you can see, this is how the output is being logged into this. We, apart from that, we also log which tool it is, what command is used, what is the target information.
+03:30
+If it's successful, then it's success. If it gets timed out, or if there's an error, then it will log. That as well.
+03:38
+At what time this was completed, and was saved under this, um, sg is also being, uhh, logged. So, that's how it works.
+03:54
+Next I would like to show you the nmap command. Now, next is nmap. Which is basically for the port and service scanner.
+04:05
+As you can see, what we have run is this command. Umm, the output shows that the port 80 and 443 are open, as well as the 22.
+04:19
+Umm. And we can also identify from this, that the. The web server engine X on port 80. As you can see.
+04:32
+So, basically this gives us a clear picture of which services are publicly exposed and what software they are running using the uh, in-map command.
+04:44
+And same for DNS. We- are vlogging the tool, the command, the timestamp at which this was saved, the address of it, and uh, yeah.
+05:03
+So, that's how the folder structure is. So, under artifacts, we have the run ID. Under the run ID, we have, if it's a recall.
+05:13
+On result, then it's under econics. If it's a vulnerability result, then it's under the world next. And, under that also, based on, let me just show you this one.
+05:26
+Based on what tool we have run, or, if there are multiple commands that we can, we want to run in the future, right now we just have one that we are running.
+05:36
+But, it's not. In the if we want to run multiple, then we can add those files as well. So, each, um, tool, and then it's this, uh, output.
+05:49
+Okay. So, that's that. Okay. So, next is the AI summation. The optimization of the recon output.
+06:05
+Up till now, I have showed how the output is being added, what each tool does. Now, I will show you how AI is summarizing all the details.
+06:16
+Now, instead of analyzing 100 of lines of outputs, we just pass all the structured recon data. Into the recon summary agent.
+06:29
+Now, the recon summary agent is basically responsible for highlighting the key findings in the most humanized way.
+06:40
+If we can see, we have one summary folder, and if you want to check, it's already on yesterday and so on.
+06:48
+So, under the, summary label, we have two files. One is the human readable summary, which if we want, we can also show it on the UI site that this is the reconnaissance that we have done.
+07:07
+These are the tools that have run and what are the information that's, key findings. And everything, basically in the most humanized way, is being added oil.
+07:24
+And next is the vulnerability summary. This is umm, basically the all the details for umm.
+07:37
+Mm. Mm. Okay. So, okay, basically this is much more structured for the tool consumption. It extracts these service banners, devotions, the, and basically it creates a Jason-like structure, which will be for the U.
+08:01
+You use for fetching all the auxiliary modules that we want for the vulnerability scanning. As you can see, uh, this is in more detailed form, which we do not want to display to add, uh, to the, uh, people, but it's mostly for us to understand.
+08:25
+What are the things that are currently being there in our current, uh, based on the recon outputs? So, this is the JSON format of all the details that have been obtained from the recon data, which will be further used for vulnerability scanning.
+08:47
+Okay, so basically, Okay, this pipeline helps us to go from raw recon data to human insight to actionable module planning.
+09:02
+With all this data, we will, we are ready for the next part. That is the vulnerability scanning. Okay, so now we have seen the recon, but let's move to the vulnerability scanning.
+09:19
+Umm, similar to the reconx, we do not have to add much more details for vulnerability. All we need is the domain.
+09:28
+And yes, the run ID should be same as the one that was passed into recon. Then only it will work in a synchronized way, otherwise.
+09:38
+It will cause an issue. So, for the world next, the two most important part is the run ID that, uh, using which the recon was done and the domain.
+09:51
+Tool config, again, if you do not, if we do not want to pass, we have default tools that we have set, which will buy the for- all run all the vulnerabilities, umm, information.
+10:07
+So, let's go report now. So, again, only three things useful for in this case. So, this is our one next package and the three tools that we have integrated for the vulnerability right now is the N-map, the Nikto and the- Alright.
+10:26
+This is the exploit. Each of those you can already find in the S3 bucket. We have the- Oh, why am I able to click?
+10:38
+Okay. Each of those you can see all the data in here. The modules that we have run, the output that we have got.
+10:51
+Oops. This is not the one. Oh. I think they should work otherwise, alright. Me. Yeah. Mmm. This is the second user that I heard.
+11:08
+Okay. No, me. Um, okay. So, basically I have to run- in local and forgot to push this on a stick.
+11:17
+I'll update it and we'll let you know. Okay. So, that's the vulnerability part. The, major thing that we are currently working on the fetching of the auxiliary modules using the metasploidal agent.
+11:38
+So, basically the plan is to have the auxiliary modules fetched based on the recon insights and the system prompts.
+11:51
+We start by feeding the recon summary from the previous tab, that is from the recon information. Uh, And as well.
+12:01
+Okay. Thanks. Bye. you Using the different outputs from Nmap, from DNS Recon, subfinder, and the summary that we have generated is passed to the LLM agent.
+12:15
+This is basically for structuring the facts and set the foundation for the optimal Metasploic modules.
+12:28
+Let me just show you. So we have this prompt where we are providing it all the information to extract the data.
+12:39
+Uh, uh, okay. The Metasploic adhesion is currently backed by the summation. And for doing that, we have registered one plugin, MSF plugin.
+12:59
+Now, MSF plugin is basically responsible for, um, running the commands for MSF, using the MSF console, and getting all the, module information.
+13:17
+So, let me explain it to you in this way. The recon summary is fetched. It is passed to the LLM agent.
+13:26
+The LLM agent, then based on the prompts and the data, it will first of all go ahead to the MSF plugin, and try to fetch all the auxiliary, oops.
+13:39
+Yeah, try to fetch all the auxiliary modules currently present for that Metasploid version. Now, once we get all the auxiliary modules, it will then check for uhh, whether that uhh, based on the recon data, which auxiliary modules we need to use.
+13:59
+And based on that, it will, will then give us the list of auxiliary modules that we need to run. I have one screen shot, I can show it to you.
+14:13
+So, as you can see, the agent has called the MSF plug-in, and plug-in then checks by itself, and it finally, the agent is given.
+14:26
+Able to give us the auxiliary module parts, which we can run by ourselves, and the output of which is being saved in our system, with the path that we have added, um.
+14:50
+The ports and everything. So, everything that binds on the prompt, we have strictly provided that this should be the output only with the auxiliary path, type should be auxiliary, what should be the host and port name, and all of this is being done using the decon data that we have passed.
+15:15
+So, in summary, we fetch the recon context from S3, use a finely tuned metasploid agent powered by semantic kernel, and then plan smartly how to get or fetch the auxiliary modules based on the facts.
+15:39
+Then, again, we validate from our end, and, uh, clean raw output is being saved. So, this pipeline turns the recon into insight into automated scanning with audit trail.
+15:58
+And audit trails, we can see in here. I will definitely push this. And there's three for you to see. But yeah, this is the thing that's.
+16:12
+
+Okay, so, yeah. Let me know what you think. Thank you.
+
+
+
+
+ 
+
+
+Hey @Syed Wajahath, Here’s the plan to get you started:
+Familiarize with the Codebase & Structure
+Review the existing cyberxray-be repo.
+Pay attention to Asset Management and the MVP Test Scheduling API.
+This will help you understand our layering (API → service → repository → models) and conventions.
+Checkout the existing database design and api structure
+Coordinate with the Team
+Connect with @Kaushal Khokhar regarding the Discovery of Assets API.
+Review how manual asset management works today, since Discovery will extend or complement that flow.
+Propose Implementation Approach
+Based on your review, draft a clear proposal on how we should implement Discovery of Assets.
+Include details like:
+API endpoints needed
+Data models/tables involved
+How it ties into existing manual asset grouping and scheduling
+Edge cases and validation requirements
+Review & Approval
+Share your proposal with the team for discussion and approval.
+We’ll refine it together to ensure alignment with the broader architecture.
+Start Building
+Once approved, you’ll start implementing the Discovery of Assets feature.
+Follow our standard practices: incremental PRs, good test coverage, structured logging, and clear documentation.
+Additional Onboarding Steps
+Get your local dev environment running (Postgres + FastAPI stack).
+Provide a MVP de-risk plan so we can understand short-term vs long-term scope.
+Look into how artifacts (S3/local) are saved, since discovery runs will eventually plug into the same orchestration model.
+Start small: maybe first extend asset CRUD with a discovery-related flag, then move into more complex orchestration.
+
+
+
+AYUSHI again explained me with this example 
+Manual Asset 
+- Hypertrends
+    - ticketblox.com
+    - Hypertrends.com
+    - Xyz.hypertrends.com
+
+Asset Disocer
+
+Asset -> run discovery (reconx) -> summary json in s3
+
+Asset grouping
+
+Pentest Scheduling -> Vulnerability ExploitX
+- run_id & group_id
+
+Schedule (MVP) - one-time 11 sept 12 PM
+Schedule Monthly - recurring - 11 th date of every month 12 PM
+
+Asset Discovery 
+
+Cyberbenchmark-artifacts
+
+└───artifacts
+    ├───123e4567-e89b-12d3-a456-426614174000
+    │   ├───reconx
+    │   │   ├───amass
+			123e4567-e89b-12d3-a456-426614174000:===== Amass Metadata =====
+Tool      : amass
+Target    : hypertrends.com
+Status    : SUCCESS
+Command   : amass enum -passive -d hypertrends.com
+Timestamp : 2025-08-29T11:15:06.411723+00:00
+==========================
+
+----- STDOUT -----
+hypertrends.com (FQDN) --> ns_record --> ns18.domaincontrol.com (FQDN)
+hypertrends.com (FQDN) --> ns_record --> ns17.domaincontrol.com (FQDN)
+hypertrends.com (FQDN) --> a_record --> 107.180.250.162 (IPAddress)
+www.hypertrends.com (FQDN) --> cname_record --> hypertrends.com (FQDN)
+107.180.224.0/19 (Netblock) --> contains --> 107.180.250.162 (IPAddress)
+26347 (ASN) --> managed_by --> DREAMHOST-AS - New Dream Network, LLC (RIROrganization)
+26347 (ASN) --> announces --> 107.180.224.0/19 (Netblock)
+hub-dev.hypertrends.com (FQDN) --> cname_record --> cname.vercel-dns.com (FQDN)
+demo2.hypertrends.com (FQDN) --> cname_record --> blox.hypertrends.com (FQDN)
+test.st-dev.hypertrends.com (FQDN) --> cname_record --> cyberphisherapi-dev.hypertrends.com (FQDN)
+caretabsapidev.hypertrends.com (FQDN) --> cname_record --> caretabsapi-dev.graypebble-aded1b4f.eastus.azurecontainerapps.io (FQDN)
+hyperdailyapi-dev.hypertrends.com (FQDN) --> cname_record --> hyperdaily-dev.calmflower-1a360a68.eastus.azurecontainerapps.io (FQDN)
+hypertrends.com (FQDN) --> mx_record --> hypertrends-com.mail.protection.outlook.com (FQDN)
+onetesta-e5f651.st-dev.hypertrends.com (FQDN) --> a_record --> 54.227.129.229 (IPAddress)
+onetesta-e5f651.st-dev.hypertrends.com (FQDN) --> a_record --> 98.86.243.161 (IPAddress)
+54.224.0.0/14 (Netblock) --> contains --> 54.227.129.229 (IPAddress)
+98.80.0.0/12 (Netblock) --> contains --> 98.86.243.161 (IPAddress)
+0 (ASN) --> managed_by --> Not routed (RIROrganization)
+0 (ASN) --> announces --> 98.80.0.0/12 (Netblock)
+14618 (ASN) --> managed_by --> AMAZON-AES - Amazon.com, Inc. (RIROrganization)
+14618 (ASN) --> announces --> 54.224.0.0/14 (Netblock)
+ns18.domaincontrol.com (FQDN) --> a_record --> 173.201.76.9 (IPAddress)
+ns18.domaincontrol.com (FQDN) --> aaaa_record --> 2603:5:22c0::9 (IPAddress)
+173.201.64.0/20 (Netblock) --> contains --> 173.201.76.9 (IPAddress)
+2603:5:22c0::/44 (Netblock) --> contains --> 2603:5:22c0::9 (IPAddress)
+44273 (ASN) --> managed_by --> DYNAMICNET (RIROrganization)
+44273 (ASN) --> announces --> 173.201.64.0/20 (Netblock)
+44273 (ASN) --> managed_by --> GODADDY-DNS, DE (RIROrganization)
+44273 (ASN) --> announces --> 2603:5:22c0::/44 (Netblock)
+st-dev.hypertrends.com (FQDN) --> ns_record --> ns-1937.awsdns-50.co.uk (FQDN)
+st-dev.hypertrends.com (FQDN) --> ns_record --> ns-607.awsdns-11.net (FQDN)
+st-dev.hypertrends.com (FQDN) --> ns_record --> ns-1138.awsdns-14.org (FQDN)
+st-dev.hypertrends.com (FQDN) --> ns_record --> ns-237.awsdns-29.com (FQDN)
+ns-1937.awsdns-50.co.uk (FQDN) --> a_record --> 205.251.199.145 (IPAddress)
+ns-1937.awsdns-50.co.uk (FQDN) --> aaaa_record --> 2600:9000:5307:9100::1 (IPAddress)
+205.251.192.0/21 (Netblock) --> contains --> 205.251.199.145 (IPAddress)
+2600:9000:5300::/45 (Netblock) --> contains --> 2600:9000:5307:9100::1 (IPAddress)
+16509 (ASN) --> managed_by --> AMAZON-02 - Amazon.com, Inc. (RIROrganization)
+16509 (ASN) --> announces --> 205.251.192.0/21 (Netblock)
+16509 (ASN) --> announces --> 2600:9000:5300::/45 (Netblock)
+ns-237.awsdns-29.com (FQDN) --> a_record --> 205.251.192.237 (IPAddress)
+ns-237.awsdns-29.com (FQDN) --> aaaa_record --> 2600:9000:5300:ed00::1 (IPAddress)
+205.251.192.0/21 (Netblock) --> contains --> 205.251.192.237 (IPAddress)
+2600:9000:5300::/45 (Netblock) --> contains --> 2600:9000:5300:ed00::1 (IPAddress)
+ns-607.awsdns-11.net (FQDN) --> a_record --> 205.251.194.95 (IPAddress)
+ns-607.awsdns-11.net (FQDN) --> aaaa_record --> 2600:9000:5302:5f00::1 (IPAddress)
+ns-1138.awsdns-14.org (FQDN) --> a_record --> 205.251.196.114 (IPAddress)
+ns-1138.awsdns-14.org (FQDN) --> aaaa_record --> 2600:9000:5304:7200::1 (IPAddress)
+205.251.192.0/21 (Netblock) --> contains --> 205.251.196.114 (IPAddress)
+205.251.192.0/21 (Netblock) --> contains --> 205.251.194.95 (IPAddress)
+2600:9000:5300::/45 (Netblock) --> contains --> 2600:9000:5304:7200::1 (IPAddress)
+2600:9000:5300::/45 (Netblock) --> contains --> 2600:9000:5302:5f00::1 (IPAddress)
+
+----- STDERR -----
+
+The enumeration has finished
+
+
+    │   │   ├───dnsrecon		
+    │   │   ├───nmap_port_scan
+    │   │   ├───nmap_scan
+    │   │   ├───nuclei
+    │   │   ├───subfinder
+    │   │   ├───summary
+    │   │   └───theharvester
+    └───vulnx
+    │       ├───metasploit
+    │       ├───nikto
+    │       ├───nmap	
+    │       └───nuclei
+
+
+
+cyberbenchmark-artifacts are the contains the tools which needs to be run in a pipeline maybe once/repeated and its output will be saved into S3 in JSON format.
+file cyberbenchmark-artifacts\cyberbenchmark-artifacts\artifacts\123e4567-e89b-12d3-a456-426614174000\reconx\amass\123e4567-e89b-12d3-a456-426614174000 (as the content is above in folder tree which will be parsed to create this JSON into S3, similarly all those folder/tools will creating its output and everything will be parsed to create the final JSON, so i need to create an schema to save the JSON data.
+			
+		
