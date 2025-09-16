@@ -1,0 +1,311 @@
+Recon X
+
+00:00
+Please feel free to, uh, you know, point out at that same instance, so that we don't have to go back and forth over this.
+00:08
+Sure, makes sense. Okay. So, Reconyx is simple, it's just running off all the tools. Okay, whatever tools you want to, it's very beautifully managed.
+00:24
+Where the tool execution tracker is tracking every information. Okay? And, uh, we are saving information in two databases. One is the DynamoDB and one is S3 blog.
+00:42
+So, in S3, we are saving the raw information. Bye-bye. Information of basically the tools or the output of those tools?
+00:54
+Okay. So, where actually the tools actually being registered? Within Reconyx only, right? Yeah, within Reconyx. Reconyx. Okay. Oh, yes, I remember this.
+01:04
+MS, yes. And every tool will run, will have its own status, whether it succeeds or fails. Or its failure. So, even if it's failed, we are still, uhm, logging information so that we have something to know.
+01:25
+So, that being said, we are saving the output of those tools inside Then we are saving the execution information of those tools.
+01:36
+So, when I say execution information, what I mean is, we will have, the run ID in S3, where exactly it is being saved, and the status, whether that was successfully done, or partially done.
+02:00
+Success, start time and time, uhm, what type of package, this is from D-Connex, that's why it's D-Connex. We will have, uhm, Mhm.
+02:16
+Then the tool names, uhm, duration in second, what command it was run with. And, basically, every information you can think of is under the DynamoDB.
+02:28
+Any questions? Uh Uh, no. Okay.
+02:39
+So, we just collected the tooling information, we save tooling data or the output into ES3, and and the tool pipeline details in DynamoDB.
+02:51
+Correct. Okay. So, currently, we have almost 1, 2, 3, 4, 5, 6, 7, 8, 8 tools that can be run and its information can be seen under S3.
+03:13
+Okay. So, this is the part of ReconX. The next we have is the ReconIQ or AgenticIQ. The structuring is very much same to the ReconX.
+03:32
+We have currently two agents. One is the Storyteller region and world. And is the ReconSummaryAgent. Okay. What basically this AgentIQ is?
+03:43
+AgentIQ is basically, uh, we have rendered tools, right? But that is not what, uh, that is not what we want.
+03:52
+We want to understand what is happening after rendering. So, that is how AgentIQ comes. Okay. It takes the output, right?
+04:01
+Output of the tools. Yeah. Right? Yeah, yeah. Okay. So, StoryDaggerAgent is basically nothing but human-readable summary. It will tell us, uhm, summary.
+04:08
+It will tell us what, how ReconSummary was, ReconSummary was done. This will be removed.
+04:20
+So, what is it we have discovered? What are our key findings, security implications, recommendations, everything. So, this prompt will get updated and managed over time.
+04:38
+But, for starters, we have this. Next, the SummaryAgent is basically for the vulnerabilities. So, this is the summary that is generated from all the tools so far.
+05:13
+Okay. Then, what is the point of looking into those text files of each tool? This No, no, not this summary.
+05:27
+That too. The amass folder that you were showing right now, this one. This is basically for us, so that, because for, generating the summary, you will need the raw data, right?
+05:40
+So, that data. Okay. Coming from these files only. Okay. No, at this point only you said, uh, it will be passed and saved as JSON in S3, right?
+05:55
+JSON in S3, that's one summary. Yes. I mean, those files that you said, AMAS, that weird file, that log type file, this one, this will be passed to S3, I remember when we spoke last time.
+06:09
+Yes. It, these are already in S3, even the summaries are in S3. Okay, so think of it like this. So, we have one domain as S3 and now we are doing reconnaissance, and reconnaissance means that finding the subdomains, open ports, and every detail for this host, okay?
+06:43
+And we are saving that under S3 for display. And we different tools, that is Amos, then the Harvester, Subfinder, etc.
+07:00
+Okay? Once we get all these details, then we fetch all these, sorry, we fetch all these details, then we give it to the email.
+07:13
+Then agent generates the summary. Now, this summary is again passed to the vulnerability package or service, whatever you say. And then it will do the vulnerability scanning with different tools.
+07:33
+So, it's a whole process. Hmm. There will be again tools There will be another few tools again. Yes. Then from this, again it goes to agent and again generates the vulnerability summary.
+07:52
+Then again it will go to exploitation and again exploit X tool So, it's a complete chain. Hmm. OK. OK, any questions No, so summary of each and output of each tool will be saved into S3 at each time.
+08:25
+Each time, right? Yeah. Per cycle, OK. When you say agent here, it is agent IQ, right? Yeah. Agent IQ, sir, yes, OK.
+08:34
+Output of the tool is under S3 and execution status of tool is under DynamoDB.
+08:49
+And fetching of the domain information is from Postgres, that is from X-Array API. X-Array. Fetching of domains or basically the assets.
+09:07
+Yeah. Domain, then we can say target. Assets. Uh-huh. Contract. So, I need to focus on which area here?
+09:25
+Starting from reconnaissance to the, uh.
+09:38
+Summary. Majority of it is done. Like, as you can see, it's 70-80% Completed. What we need to do is.
+09:57
+Majority of it is done in separate service. We need to complete end-to-end. That means, that being said, that X-Ray should be able to call, uhm, where is it, uhm, this entire flow, and this Reconnex API must be triggered.
+10:29
+Only the bridging is left. Okay. Okay. For the time being, we can do it locally, directly, right? Is what Kishore was mentioning.
+10:41
+Yes, yes, yes, yes. So, then it will be reconfigured via SQS. We basically take care of tail limits. Okay. So, under the Excel API, we will have one reconnaissance segment, where we will be, first of all, triggering the reconnects.
+11:04
+When I say the triggering of reconnects, I mean, this particular item. So, we get this result, then we want to generate.
+11:22
+Now, the result should be, ah, successful, like, for all the tools. So, this API, we will need, uhm, rerun for the tool for a specific, I'll explain this, uhm, target and, uhm, ID.
+12:01
+Okay. When you trigger the reconnects, there are two things that we will need. Target, that is, the domain, and run ID.
+12:12
+Okay. Now, in that basis, all the tools are run, and they are run parallelly. So, there can be a possibility where out of 8 tools, we successfully, we have got 6, and we got failure for 2.
+12:33
+So, we will have to create one API, which will be responsible for rerunning a tool for a specific target and run it.
+12:50
+whose status will be failure, like, for these two. Like, am I making sense? Hmm, okay.
+13:03
+Okay. Once everything is run successfully, then we will generate the, uhm, AI summary.
+13:14
+When I say AI summary, we just have to trigger this Recon IQ API with the run ID and a target, Uh-huh.
+13:24
+This is already ready, is it? It's like in the final stage, I'll just have to pre-pone a lot of things, but almost done with this.
+13:38
+So, we'll have to figure out a way where the reconnaissance is running, okay? If it has failed, it should be triggering rerun, and we have to generate the AI summary Uh-huh.
+14:02
+Is it making sense? Like, how? Here. Trigger to generate AI summary.
+14:13
+
+What do we see?
+14:54
+The APIs and how we will be listing everything. Okay, so as of my understanding, it's under recon. So, one post API to start and there's one gate API to list all the jobs.
+15:14
+And then one more to get an specific job details. Under reconnects. No, I'm just telling you by my understanding.
+15:39
+Sorry, repeat that I might have misunderstood. So, under reconnects. So, which we have already written against, ah, one API to start, right?
+15:53
+API slash, ah, this one. This basically runs the pipeline right. It basically, ah, executes, right? So, collecting all the assets, use those tools, and run the pipeline, and generate this, generate the output of those tools, ah, that AMOS, that kind of, and save S3, and then, Bye for now.
+16:26
+We'll soon. Transcribed by There could be one, ah, generate summary AI using that agentic service, right? Yeah. So, yes, that we need to hit from X-ray, right?
+16:39
+From X-ray, we need to hit this, right? For, for MVP, we will do that. So, if a user comes in, like the entire flow is, a user comes in, and types, types, hypertrends, dot com, and it starts decom, okay?
+16:59
+So, that should be able to, uhm, there should be one API in X-ray, which will be taking the information, and will be called the VconX API.
+17:18
+And, first of all, it will do this. Then, uh, if it, all the tools are successful, then it will generate the VconIQ.
+17:29
+Oh, yes, to generate the summary, okay. This is the app we are building, is it?
+17:49
+This is the app we are currently building, is it? Yes, it This is actually the UI and, okay. Okay. So, okay.
+18:02
+This is, This is good. Now, when we want to view this, so, it should be, You mean the pipeline, when you say view this?
+18:13
+Correct. What's being done, okay. API for Recon X and the run ID, it should be able to give me, Specific job details.
+18:43
+Yeah, the status. I think what we can do is, we can directly, based on the run ID, we can you know, give all the details.
+18:58
+All the, what? Uh, okay. When we say that we want to have the get status information, what do you think should be, be displayed?
+19:14
+Status, what is the status of the pipeline? What's the status of each tool being run, right? Success, failure, right? In terms of steps, like, we'll be looking into the output of each tool.
+19:36
+Let's say there are eight tools, two are completed. One is failed, one is running. Okay, and So, they will, on status, we'll be maintaining a status on DynamoDB, I believe, and throwing the output to S3.
+19:56
+So, both ultimately represents the status. I would prefer to look into the DynamoDB, I believe. Yes. Scan through the DynamoDB with the given, and we'll get all the rest of the tools with us.
+20:12
+Uh-huh. We might need a delete job to write one more API.
+20:27
+Delete or cancel? It's a doubt. Not for MVP, but, yeah. Okay, what else do you think we will need based on the UI?
+21:02
+You can also open in your, uhm, system. Pass me the URL then, please. We don't have to show the logs, so.
+21:15
+OK, we don't have to show the logs and how would output of each tool? Then the rerun might be.
+21:33
+We did write, I guess, I mean manual rerun, yeah.
+22:01
+So there is no deleted it. Just Uh-huh. Why Oh. Go ahead, you were saying. Uh, are we not going to write any delete pipeline?
+22:34
+Delete, uh, is, pause is basically a delete. I don't think so, we will be deleting. Yeah.
+22:48
+Okay. So, remove, maybe, we can save. Oh, yes, after remove, yes. Uh-huh. We'll have a delete, I mean, thing. Uh-huh.
+23:08
+We don't want to show the output. Uh-huh. I think we're almost done, right? Discovery of tools, uhm, discovery of Yes, installs.
+23:25
+Get API. Yeah. Have you checked, uhm, the artifacts that I have shared, like the emars and all that information? Yes.
+23:36
+Yes, I did. Okay. So, we might need one API, slash API, slash reconnects, slash, maybe run ID, slash discovered essence, something like that.
+23:53
+I'm, I'm just roughly typing it, but. Discovered asset, okay, assets discovered.
+24:28
+Be adjusted, which should be in the cyber X ray thought. Sorry, assets assets discovered API should be in the.
+24:51
+X ray API. But shouldn't that be after reconnaissance because. Once we have discovered assets, all the details will be saved on the manual assets.
+25:07
+I, I do want to check how you have added the information. Am I making sense?
+25:22
+Yes. Yes. Just one second. What else We'll have to figure out what and where everything will come. Let me see if we want to discover a set.
+26:16
+We will have a set. Your voice is not audible.
+27:00
+Yeah, yeah, no, I'm just reading that out, what I've done. Have you gone through the agent Agent? No, development It was already shared to you.
+27:26
+I know there are a lot of documents here and there.
+27:27
+Hm, That's what, you know, at the very beginning, just getting too much.
+27:48
+And once I start exploring one, I'm losing another. It's a lot to be, you know, handling.
+27:59
+Yes, at the beginning it is, to be honest. I'm actually losing track of one. And I was totally confused with, ah, the acid discovery and reconnects at some point.
+28:10
+And now it's not so, I guess. Yeah. That's the reason I'm just having a bit hard time here. Take your time.
+28:22
+And if you have any doubt, you can definitely reach out, like, whatever. You know what, with such huge content, when I need to reach out, then I need to recall from kind of beginning.
+28:37
+That's what I don't really like. That's fine. I'm connecting the dots slowly. We do not have the run ID being created right now, so we'll have to figure out how we will create the run ID.
+29:08
+One run ID that will be working for everything. Yes, we say the pipeline ID. They can be multiple to some other age, right?
+29:26
+It just does some tenant name and some random stuff, right? ID may look like some tenant information and some random string, isn't it?
+29:41
+Okay. Again, note, this is all for MVB right now, once we have the infrastructure in place.
+30:44
+Right now, it's not. That's why we have to go in and manually trigger the API. So just to build a dummy API's are some.
+31:01
+Some sort of test data kind of workflow needs to do better, OK? Therefore, running specific tool or we run all the tools, so.
+31:32
+Okay.
+31:45
+Anything It's already there. Anup has already shared. It's pretty hard to study those threads. It seems that Anup has already shared.
+32:21
+Yeah, that's the strategy. This is the one, Which is the link, please? Over here, under the X-ray ZEPP strategy, all the video links, and under that, this is the lovable link.
+32:54
+Okay. So, okay. So, what we will, we both will do today is, we'll prepare one confluence document, which will, uhm, inform regarding the Reconnex API.
+33:10
+Then, the API that is needed for MVP version, for integration between the Reconnex API and the X-Ray API. And, you will parallely start looking into the Reconnex API, like, how the tools can be run, what all tools are needed.
+33:29
+Okay? Okay. What all tools can be needed? How can I?
+33:39
+I mean, I just tools, right? Yeah. Then I just, Just register and start to indicate. That's it. Yeah. You need to, first of all, install all the tools.
+33:47
+Otherwise, nothing Oh, I see. How those tools need to be installed? How those tools I just, uh, see this output.
+33:59
+How those tools that actually look like? Is that a separate service again? So if you have Mac, I have already added the way we can install it.
+34:13
+If you don't have, you'll need to ask. That's It's ultimately it's Linux only, right?
+34:26
+And that's Mac is built on top of. Yes, I'm from Windows, so at least I do have the. Uh, WSL.
+34:35
+It will not be so hard. It just a pretty replacement homebrew. Uh, yes, quite sorry, it's pretty simple. You won't.
+34:46
+Have any issues. So these are the list of tools everything that you need is. Is under the readme folder. We have the overview of this entire package.
+34:59
+What tools we have integrated with what version I I have updated the. Yeah, with the versions OK. OK, I don't have access to this repository, I guess.
+35:21
+
+So far, it's just Cybercatch, XRAC. Yes, I feel most of the dots will connect from there for me.
+
+
+
+
+
+
+
+Here is the workflow below
+
+---
+
+### **Xray API & ReconX API**
+
+#### **Reconnaissance Runs**
+
+* **POST API - Manually trigger the ReconX**
+
+  * **For MVP**
+
+    * ReconX API - (`/api/reconx`)
+    * `target(domain)` and `run_id`
+    * Tool - 8, success - 6, failure - 2
+
+* **POST - Manually trigger to generate Recon AI Summary**
+
+  * **For MVP**
+
+    * ReconX API - `/api/recon_iq`
+
+* **POST Rerun a Job**
+
+  * If any tool fails we might need to rerun that specific tool with max retry count as 3
+  * Choice - running specific tool or re-run all the tools
+
+* **GET `/api/reconx/run_id/status`**
+
+  * Scan through the DynamoDB with the given `run_id`, we’ll get all the list of tools with the status:
+
+    * Status
+    * Duration
+    * Assets Found
+    * Tools Used
+
+* **GET `/api/reconx/run_id/discovered_assets`**
+
+  * **Information**
+
+    * Asset
+    * Discovered at
+    * Type
+    * IP Address
+    * Service
+    * Confidence
+    * Discovered By
+  * With pagination
+
+* **GET `/api/agent_iq/run_id`**
+
+  * **Presigned URL from S3**
+
+    * Recon Story Teller Agent
+    * Recon Asset Discovery Agent
+    * Recon Summary Agent
+
+* **POST Pause a Job (not for MVP)** *(Soft Remove)*
+
+---
+
+### **ReconX API**
+
+* **API**
+
+  * Rerun for a tool for a specific target and run id
+
+    * failure - 2
+
+---
+
+
